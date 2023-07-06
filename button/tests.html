@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <script type="module" src="suic-button.js"></script>
+  </head>
+  <body>
+    <div>
+      <div style="margin: 10px">
+        <suic-button
+          id="button-one"
+          text="Testing button!"
+          type="submit"
+          bg-color="red"
+          text-color="white"
+        ></suic-button>
+      </div>
+      <div style="margin: 10px">
+        <suic-button
+          id="button-two"
+          text="Testing button!"
+          type="submit"
+        ></suic-button>
+      </div>
+    </div>
+    <script>
+      const button1 = document.getElementById("button-one");
+      const button2 = document.getElementById("button-two");
+
+      button1.addEventListener("suicClick", function (event) {
+        console.log("SUIC CLICK 1:", event);
+      });
+
+      button2.addEventListener("suicClick", function (event) {
+        console.log("SUIC CLICK 2:", event);
+      });
+    </script>
+  </body>
+</html>
