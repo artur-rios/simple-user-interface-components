@@ -92,8 +92,8 @@ class SuicButton extends HTMLElement {
       });
 
       component.addEventListener("mouseout", function () {
-        component.style.boxShadow = ""; // Reset background color on mouseout
-        component.style.transform = ""; // Reset text color on mouseout
+        component.style.boxShadow = "";
+        component.style.transform = "";
       });
     }
   }
