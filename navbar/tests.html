@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta name="viewport" content="width=device-width" />
+    <script type="module" src="suic-navbar.js"></script>
+  </head>
+  <body style="margin: 0; box-sizing: border-box">
+    <suic-navbar title="Artur Rios"></suic-navbar>
+
+    <script>
+      const navbarItems = [
+        { name: "GitHub", url: "https://github.com/artur-rso" },
+        { name: "LinkedIn", url: "https://www.linkedin.com/in/artur-rso" },
+      ];
+
+      const dataAsText = JSON.stringify(navbarItems);
+      document.querySelector("suic-navbar").setAttribute("data", dataAsText);
+    </script>
+  </body>
+</html>
