@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <script type="module" src="../button/suic-button.js"></script>
+    <script type="module" src="suic-text-input.js"></script>
+  </head>
+  <body>
+    <div>
+      <div style="margin: 10px">
+        <suic-text-input
+          id="input-one"
+          placeholder="Type anything"
+        ></suic-text-input>
+      </div>
+      <div style="margin: 10px">
+        <suic-button
+          id="button-one"
+          text="Testing button!"
+          type="submit"
+          bg-color="red"
+          text-color="white"
+        ></suic-button>
+      </div>
+    </div>
+    <script>
+      const button1 = document.getElementById("button-one");
+
+      button1.addEventListener("suicClick", function (event) {
+        const input1 = document.getElementById("input-one");
+
+        console.log("INPUT VALUE:", input1.value);
+      });
+    </script>
+  </body>
+</html>
