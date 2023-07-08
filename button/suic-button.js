@@ -38,62 +38,73 @@ class SuicButton extends HTMLElement {
         this.handleClick(component.textContent);
       });
 
+      // Dynamic styles
+      const backgroundColor = this.getAttribute("bg-color")
+        ? this.getAttribute("bg-color")
+        : "#fe0000";
+
+      const fontSize = this.getAttribute("font-size")
+        ? this.getAttribute("font-size")
+        : "15px";
+
+      const horPad = this.getAttribute("hor-pad")
+        ? this.getAttribute("hor-pad")
+        : "20px";
+
+      const textColor = this.getAttribute("text-color")
+        ? this.getAttribute("text-color")
+        : "#fff";
+
+      const verPad = this.getAttribute("ver-pad")
+        ? this.getAttribute("ver-pad")
+        : "10px";
+
       // Standard styles
-      component.style.alignItems = "center";
-      component.style.appearance = "none";
-      component.style.borderRadius = "5px";
-      component.style.borderWidth = "0";
-      component.style.boxShadow =
-        "rgba(45, 35, 66, 0.4) 0 2px 4px,rgba(45, 35, 66, 0.3) 0 7px 13px -3px,#D6D6E7 0 -3px 0 inset";
-      component.style.boxSizing = "border-box";
+      component.style.backgroundColor = backgroundColor;
+      component.style.border = "2px solid #000";
+      component.style.borderRadius = "10px";
+      component.style.boxShadow = "5px 5px 0px #000";
+      component.style.color = textColor;
       component.style.cursor = "pointer";
       component.style.display = "inline-flex";
-      component.style.height = "48px";
-      component.style.justifyContent = "center";
-      component.style.lineHeight = "1";
-      component.style.listStyle = "none";
-      component.style.overflow = "hidden";
-      component.style.paddingLeft = "16px";
-      component.style.paddingRight = "16px";
-      component.style.position = "relative";
-      component.style.textAlign = "left";
+      component.style.fontSize = fontSize;
+      component.style.fontWeight = "bold";
+      component.style.padding = `${verPad} ${horPad}`;
+      component.style.textAlign = "center";
       component.style.textDecoration = "none";
-      component.style.transition = "box-shadow .15s,transform .15s";
+      component.style.transition = "all 0.3s ease";
       component.style.userSelect = "none";
       component.style.touchAction = "manipulation";
       component.style.whiteSpace = "nowrap";
       component.style.willChange = "box-shadow, transform";
-      component.style.fontSize = "18px";
 
-      // Dynamic styles
-      const bgColor = this.getAttribute("bg-color");
-      const textColor = this.getAttribute("text-color");
-
-      if (bgColor) {
-        component.style.backgroundColor = bgColor;
-      }
-
-      if (textColor) {
-        component.style.color = textColor;
-      }
-
-      // Focus
+      // Focus (:active)
       component.addEventListener("focus", function () {
-        component.style.boxShadow =
-          "#D6D6E7 0 0 0 1.5px inset, rgba(45, 35, 66, 0.4) 0 2px 4px, rgba(45, 35, 66, 0.3) 0 7px 13px -3px, #D6D6E7 0 -3px 0 inset";
+        component.style.backgroundColor = "#fcf414";
+        component.style.boxShadow = "none";
+        component.style.transform = "translateY(4px)";
+      });
+
+      component.addEventListener("blur", function () {
+        component.style.backgroundColor = backgroundColor;
+        component.style.boxShadow = "5px 5px 0px #000";
+        component.style.transform = "";
       });
 
       // Hover
       // Add event listeners for mouseover and mouseout
       component.addEventListener("mouseover", function () {
-        component.style.boxShadow =
-          "rgba(45, 35, 66, 0.4) 0 4px 8px, rgba(45, 35, 66, 0.3) 0 7px 13px -3px, #D6D6E7 0 -3px 0 inset";
-        component.style.transform = "translateY(-2px)";
+        component.style.backgroundColor = textColor;
+        component.style.border = `2px solid ${backgroundColor}`;
+        component.style.boxShadow = `5px 5px 0px ${backgroundColor}`;
+        component.style.color = backgroundColor;
       });
 
       component.addEventListener("mouseout", function () {
-        component.style.boxShadow = "";
-        component.style.transform = "";
+        component.style.backgroundColor = backgroundColor;
+        component.style.border = "2px solid #000";
+        component.style.boxShadow = "5px 5px 0px #000";
+        component.style.color = textColor;
       });
     }
   }
