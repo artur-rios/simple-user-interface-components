@@ -1,6 +1,6 @@
 {
   "name": "suic-agnostic",
-  "version": "0.0.10",
+  "version": "0.1.0",
   "description": "Simple user interface component, framework agnostic",
   "main": "dist/js/suic.min.js",
   "files": [
