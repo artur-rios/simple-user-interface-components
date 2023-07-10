@@ -1,11 +1,11 @@
 import { Component, EventEmitter, Input, Output } from '@angular/core';
 
 @Component({
-  selector: 'lib-button',
+  selector: 'suic-button',
   templateUrl: './button.component.html',
   styleUrls: ['./button.component.css'],
 })
-export class ButtonComponent {
+export class SuicButtonComponent {
   @Input() public backgroundColor = '#fe0000';
   @Input() public buttonType = 'button';
   @Input() public fontSize = '15px';

@@ -1,10 +1,8 @@
 import { NgModule } from '@angular/core';
-import { ButtonComponent } from './button/button.component';
+import { SuicButtonComponent } from './button/button.component';
 
 @NgModule({
-  declarations: [
-    ButtonComponent
-  ],
+  declarations: [SuicButtonComponent],
   imports: [],
   exports: [],
 })

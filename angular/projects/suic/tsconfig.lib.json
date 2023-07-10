@@ -6,8 +6,16 @@
     "declaration": true,
     "declarationMap": true,
     "inlineSources": true,
-    "types": []
+    "types": [],
+    "paths": {
+      "suic-angular": [
+        "../../dist/suic-angular"
+      ],
+      "suic-angular/*": [
+        "../../dist/suic-angular/*"
+      ]
   },
+},
   "exclude": [
     "**/*.spec.ts"
   ]

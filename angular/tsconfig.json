@@ -19,8 +19,11 @@
     "target": "ES2022",
     "module": "ES2022",
     "paths": {
-      "suic": [
-        "dist/suic"
+      "suic-angular": [
+        "dist/suic-angular"
+      ],
+      "suic-angular/*": [
+        "dist/suic-angular/*"
       ]
     },
     "useDefineForClassFields": false,
