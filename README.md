@@ -4,8 +4,8 @@ A library with simple user interface components that can be reused across projec
 
 ## Framework Agnostic
 
-Framework agnostic version. You can find examples of each component usage inside component source cold folder, on the index.html file
+Framework agnostic version. You can find the documentation [here](https://github.com/artur-rso/simple-user-interface-components/blob/main/framework-agnostic/documentation.md)
 
 ## Angular
 
-Components built to be used in angular projects
+Components built to be used in angular projects. Under construction, available soon
