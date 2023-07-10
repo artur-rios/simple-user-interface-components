@@ -1,6 +1,6 @@
 import { getUniqueId } from "../shared/helper-functions.js";
 
-class SuicButton extends HTMLElement {
+export class SuicButton extends HTMLElement {
   static template = document.createElement("template");
 
   constructor() {

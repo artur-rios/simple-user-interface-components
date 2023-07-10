@@ -1,6 +1,6 @@
 import { getUniqueId } from "../shared/helper-functions.js";
 
-class SuicNavbar extends HTMLElement {
+export class SuicNavbar extends HTMLElement {
   static template = document.createElement("template");
 
   constructor() {

@@ -1,6 +1,6 @@
 import { getUniqueId } from "../shared/helper-functions.js";
 
-class SuicTextInput extends HTMLElement {
+export class SuicTextInput extends HTMLElement {
   static template = document.createElement("template");
 
   constructor() {
