@@ -1,4 +1,4 @@
-# Simple User Interface components (SUIC)
+# Simple User Interface Components (SUIC)
 
 A library with simple user interface components that can be reused across projects.
 
