@@ -1,6 +1,6 @@
 {
   "name": "suic-angular",
-  "version": "0.0.9",
+  "version": "0.0.13",
   "description": "Simple user interface component library for angular",
   "files": [
     "dist"
@@ -11,7 +11,7 @@
     "build": "ng build",
     "watch": "ng build --watch --configuration development",
     "test": "ng test",
-    "package": "ng build && cd dist/suic-angular && npm pack",
+    "package": "ng build && cd dist && npm pack",
     "version-up": "npm version patch && cd projects/suic && npm version patch"
   },
   "private": false,
