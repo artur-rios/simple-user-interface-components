@@ -1,8 +1,11 @@
 {
   "name": "simple-user-interface-components",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "Simple user interface component, framework agnostic",
   "main": "index.js",
+  "files": [
+    "index.js"
+  ],
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
