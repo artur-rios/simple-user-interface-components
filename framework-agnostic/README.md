@@ -1,4 +1,4 @@
-# Simple User Interface components (SUIC) -  Framework agnostic version
+# Simple User Interface Components (SUIC) -  Framework agnostic version
 
 ## Get started
 
