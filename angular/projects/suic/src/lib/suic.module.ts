@@ -4,6 +4,6 @@ import { SuicButtonComponent } from './button/button.component';
 @NgModule({
   declarations: [SuicButtonComponent],
   imports: [],
-  exports: [],
+  exports: [SuicButtonComponent],
 })
 export class SuicModule {}
