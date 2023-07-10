@@ -24,24 +24,24 @@ export class SuicButtonComponent {
   }
 
   public getStyle() {
-    if (this.hover) {
-      return `
-      background-color: ${this.backgroundColor};
-      border: 2px solid #000;
-      box-shadow: 5px 5px 0px #000;
-      color: ${this.textColor};
-      font-size: ${this.fontSize};
-      padding: ${this.verPad} ${this.horPad};
-    `;
+    if (!this.hover) {
+      return {
+        'background-color': this.backgroundColor,
+        border: '2px solid #000',
+        'box-shadow': '5px 5px 0px #000',
+        color: this.textColor,
+        'font-size': this.fontSize,
+        padding: `${this.verPad} ${this.horPad}`,
+      };
     } else {
-      return `
-        background-color: ${this.textColor};
-        border: ${this.backgroundColor};
-        box-shadow: 5px 5px 0px ${this.backgroundColor}
-        color: ${this.backgroundColor};
-        font-size: ${this.fontSize};
-        padding: ${this.verPad} ${this.horPad};
-      `;
+      return {
+        'background-color': this.textColor,
+        border: `2px solid ${this.backgroundColor}`,
+        'box-shadow': `5px 5px 0px ${this.backgroundColor}`,
+        color: this.backgroundColor,
+        'font-size': this.fontSize,
+        padding: `${this.verPad} ${this.horPad}`,
+      };
     }
   }
 }
