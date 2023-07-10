@@ -15,18 +15,20 @@ export class SuicButtonComponent {
   @Input() public verPad = '10px';
 
   @Output()
-  public click: EventEmitter<string> = new EventEmitter<string>();
+  public sClick: EventEmitter<string> = new EventEmitter<string>();
 
   public hover = false;
 
   public handleClick(): void {
-    this.click.emit(this.text);
+    this.sClick.emit(this.text);
   }
 
   public getStyle() {
     if (this.hover) {
       return `
       background-color: ${this.backgroundColor};
+      border: 2px solid #000;
+      box-shadow: 5px 5px 0px #000;
       color: ${this.textColor};
       font-size: ${this.fontSize};
       padding: ${this.verPad} ${this.horPad};
