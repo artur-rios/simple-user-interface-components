@@ -1,10 +1,10 @@
 {
   "name": "simple-user-interface-components",
-  "version": "0.0.3",
+  "version": "0.0.6",
   "description": "Simple user interface component, framework agnostic",
-  "main": "src/index.js",
+  "main": "dist/js/suic.min.js",
   "files": [
-    "dist/js/bundle.min.js"
+    "dist/js/suic.min.js"
   ],
   "scripts": {
     "build": "webpack --config webpack.config.js",
