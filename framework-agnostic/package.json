@@ -1,10 +1,10 @@
 {
-  "name": "simple-user-interface-components",
-  "version": "0.0.6",
+  "name": "suic-agnostic",
+  "version": "0.0.10",
   "description": "Simple user interface component, framework agnostic",
   "main": "dist/js/suic.min.js",
   "files": [
-    "dist/js/suic.min.js"
+    "dist"
   ],
   "scripts": {
     "build": "webpack --config webpack.config.js",
@@ -25,7 +25,7 @@
   "bugs": {
     "url": "https://github.com/artur-rso/simple-user-interface-components/issues"
   },
-  "homepage": "https://github.com/artur-rso/simple-user-interface-components#readme",
+  "homepage": "https://github.com/artur-rso/simple-user-interface-components/tree/main/framework-agnostic#readme",
   "devDependencies": {
     "terser-webpack-plugin": "^5.3.9",
     "webpack": "^5.88.1",
