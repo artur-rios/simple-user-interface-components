@@ -1,0 +1,25 @@
+{
+  "name": "simple-user-interface-components",
+  "version": "0.0.1",
+  "description": "Simple user interface component, framework agnostic",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/artur-rso/simple-user-interface-components.git"
+  },
+  "keywords": [
+    "Simple",
+    "User",
+    "Interface",
+    "Components"
+  ],
+  "author": "Artur Rios",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/artur-rso/simple-user-interface-components/issues"
+  },
+  "homepage": "https://github.com/artur-rso/simple-user-interface-components#readme"
+}
