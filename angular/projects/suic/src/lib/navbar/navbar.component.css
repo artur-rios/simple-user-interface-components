@@ -1,0 +1,97 @@
+a {
+  color: #efefef;
+  display: inline-block;
+  padding: 13px 10px 13px 10px;
+  text-decoration: none;
+}
+
+a:hover {
+  background-color: rgba(0, 0, 0, 0.3);
+}
+
+.nav {
+  background-color: #4d4d4d;
+  font-family: "Segoe UI";
+  height: 50px;
+  position: relative;
+  width: 100%;
+}
+
+.nav-btn {
+  display: none;
+}
+
+.nav-check {
+  display: none;
+}
+
+.nav-header {
+  display: inline;
+}
+
+.nav-links {
+  display: inline;
+  float: right;
+  font-size: 18px;
+
+  &.--closed {
+    height: 0px;
+    overflow-y: hidden;
+  }
+
+  &.--opened {
+    height: calc(100vh - 50px);
+    overflow-y: auto;
+  }
+}
+
+.nav-title {
+  color: #fff;
+  display: inline-block;
+  font-size: 22px;
+  padding: 10px;
+}
+
+@media (max-width: 600px) {
+  a {
+    display: block;
+    width: 100%;
+  }
+
+  .nav-btn {
+    display: inline-block;
+    position: absolute;
+    right: 0px;
+    top: 0px;
+  }
+
+  .nav-label {
+    display: inline-block;
+    height: 50px;
+    padding: 13px;
+    width: 50px;
+
+    span {
+      border-top: 2px solid #eee;
+      display: block;
+      height: 10px;
+      width: 25px;
+    }
+  }
+
+  .nav-label:hover {
+    background-color: rgba(0, 0, 0, 0.3);
+  }
+
+  .nav-links {
+    background-color: #333;
+    display: block;
+    height: 0px;
+    left: 0px;
+    overflow-y: hidden;
+    position: absolute;
+    top: 50px;
+    transition: all 0.3s ease-in;
+    width: 100%;
+  }
+}

@@ -1,0 +1,18 @@
+<nav class="nav">
+  <input id="nav-check" class="nav-check" type="checkbox" />
+  <div class="nav-header">
+    <div class="nav-title"></div>
+  </div>
+  <div class="nav-btn" (click)="navButtonClicked = !navButtonClicked">
+    <label class="nav-label" for="nav-check">
+      <span></span>
+      <span></span>
+      <span></span>
+    </label>
+  </div>
+  <div class="nav-links" [ngClass]="navButtonClicked ? '--open' : '--closed'">
+    <ng-container *ngFor="let item of items">
+      <a [href]="item.url" target="_blank">{{ item.name }}</a>
+    </ng-container>
+  </div>
+</nav>
