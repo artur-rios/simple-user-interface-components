@@ -41,7 +41,7 @@ export class SuicButton extends HTMLElement {
       // Dynamic styles
       const backgroundColor = this.getAttribute("bg-color")
         ? this.getAttribute("bg-color")
-        : "#fe0000";
+        : "#fff";
 
       const fontSize = this.getAttribute("font-size")
         ? this.getAttribute("font-size")
@@ -53,7 +53,7 @@ export class SuicButton extends HTMLElement {
 
       const textColor = this.getAttribute("text-color")
         ? this.getAttribute("text-color")
-        : "#fff";
+        : "#000";
 
       const verPad = this.getAttribute("ver-pad")
         ? this.getAttribute("ver-pad")
@@ -61,33 +61,25 @@ export class SuicButton extends HTMLElement {
 
       // Standard styles
       component.style.backgroundColor = backgroundColor;
-      component.style.border = "2px solid #000";
+      component.style.border = `2px solid ${textColor}`;
       component.style.borderRadius = "10px";
-      component.style.boxShadow = "5px 5px 0px #000";
+      component.style.boxShadow = `5px 5px 0px ${textColor}`;
       component.style.color = textColor;
       component.style.cursor = "pointer";
-      component.style.display = "inline-flex";
+      component.style.display = "inline-block";
       component.style.fontSize = fontSize;
       component.style.fontWeight = "bold";
       component.style.padding = `${verPad} ${horPad}`;
       component.style.textAlign = "center";
       component.style.textDecoration = "none";
       component.style.transition = "all 0.3s ease";
-      component.style.userSelect = "none";
-      component.style.touchAction = "manipulation";
-      component.style.whiteSpace = "nowrap";
-      component.style.willChange = "box-shadow, transform";
 
       // Focus (:active)
       component.addEventListener("focus", function () {
-        component.style.backgroundColor = "#fcf414";
-        component.style.boxShadow = "none";
         component.style.transform = "translateY(4px)";
       });
 
       component.addEventListener("blur", function () {
-        component.style.backgroundColor = backgroundColor;
-        component.style.boxShadow = "5px 5px 0px #000";
         component.style.transform = "";
       });
 
@@ -102,15 +94,15 @@ export class SuicButton extends HTMLElement {
 
       component.addEventListener("mouseout", function () {
         component.style.backgroundColor = backgroundColor;
-        component.style.border = "2px solid #000";
-        component.style.boxShadow = "5px 5px 0px #000";
+        component.style.border = `2px solid ${textColor}`;
+        component.style.boxShadow = `5px 5px 0px ${textColor}`;
         component.style.color = textColor;
       });
     }
   }
 
   handleClick(buttonClicked) {
-    const event = new CustomEvent("suicClick", {
+    const event = new CustomEvent("sClick", {
       bubbles: true,
       detail: {
         buttonText: buttonClicked,

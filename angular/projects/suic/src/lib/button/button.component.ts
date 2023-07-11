@@ -6,11 +6,11 @@ import { Component, EventEmitter, Input, Output } from '@angular/core';
   styleUrls: ['./button.component.css'],
 })
 export class SuicButtonComponent {
-  @Input() public backgroundColor = '#fe0000';
+  @Input() public backgroundColor = '#fff';
   @Input() public buttonType = 'button';
   @Input() public fontSize = '15px';
   @Input() public text: undefined | string;
-  @Input() public textColor = '#fff';
+  @Input() public textColor = '#000';
   @Input() public horPad = '20px';
   @Input() public verPad = '10px';
 
@@ -27,8 +27,8 @@ export class SuicButtonComponent {
     if (!this.hover) {
       return {
         'background-color': this.backgroundColor,
-        border: '2px solid #000',
-        'box-shadow': '5px 5px 0px #000',
+        border: `2px solid ${this.textColor}`,
+        'box-shadow': `5px 5px 0px ${this.textColor}`,
         color: this.textColor,
         'font-size': this.fontSize,
         padding: `${this.verPad} ${this.horPad}`,

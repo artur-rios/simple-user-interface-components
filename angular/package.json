@@ -1,6 +1,6 @@
 {
   "name": "suic-angular",
-  "version": "0.0.13",
+  "version": "0.0.14",
   "description": "Simple user interface component library for angular",
   "files": [
     "dist"

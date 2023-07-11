@@ -1,15 +1,13 @@
 button {
+  border-radius: 10px;
   cursor: pointer;
   display: inline-block;
   font-weight: bold;
   text-align: center;
   text-decoration: none;
-  border-radius: 10px;
   transition: all 0.3s ease;
 }
 
 button:active {
-  background-color: #fcf414;
-  box-shadow: none;
   transform: translateY(4px);
 }
