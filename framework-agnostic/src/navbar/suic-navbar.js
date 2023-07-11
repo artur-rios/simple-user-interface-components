@@ -104,7 +104,7 @@ export class SuicNavbar extends HTMLElement {
     navTitle.style.color = "#fff";
     navTitle.style.display = "inline-block";
     navTitle.style.fontSize = "22px";
-    navTitle.style.padding = "10px 10px 10px 10px";
+    navTitle.style.padding = "10px";
 
     navBtn.style.display = "none";
 
@@ -119,7 +119,7 @@ export class SuicNavbar extends HTMLElement {
         navLinks.style.height === "0px" ? `calc(100vh - 50px)` : "0px";
 
       navLinks.style.overflowY =
-        navLinks.style.height === "0px" ? "auto" : "hidden";
+        navLinks.style.overflowY === "hidden" ? "auto" : "hidden";
 
       const navBtnNodes = navBtn.childNodes;
       for (let i = 0; i < navBtnNodes.length; i++) {
