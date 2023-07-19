@@ -33,16 +33,6 @@ a:hover {
   display: inline;
   float: right;
   font-size: 18px;
-
-  &.--closed {
-    height: 0px;
-    overflow-y: hidden;
-  }
-
-  &.--opened {
-    height: calc(100vh - 50px);
-    overflow-y: auto;
-  }
 }
 
 .nav-title {
@@ -70,13 +60,13 @@ a:hover {
     height: 50px;
     padding: 13px;
     width: 50px;
+  }
 
-    span {
-      border-top: 2px solid #eee;
-      display: block;
-      height: 10px;
-      width: 25px;
-    }
+  span {
+    border-top: 2px solid #eee;
+    display: block;
+    height: 10px;
+    width: 25px;
   }
 
   .nav-label:hover {
@@ -93,5 +83,15 @@ a:hover {
     top: 50px;
     transition: all 0.3s ease-in;
     width: 100%;
+  }
+
+  .opened {
+    height: calc(100vh - 50px);
+    overflow-y: auto;
+  }
+
+  .closed {
+    height: 0px;
+    overflow-y: hidden;
   }
 }
